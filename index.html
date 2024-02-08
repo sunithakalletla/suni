@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo su
+yum install httpd -y
+
+cd /var/www/html
+
+echo "k.sunitha" > index.html
+service httpd start
+chkconfig httpd on

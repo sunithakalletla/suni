@@ -1,0 +1,142 @@
+
+
+
+
+<html>
+ <head> 
+ <title>Registration</title>
+<script>
+function uvalid()
+{
+  
+ uname.innerText= " enter the username ";
+            
+}
+function pvalid()
+{
+var v1=new RegExp("^[\\w]{6,}$");
+var in1=document.f.login.value;
+var elements="";
+  
+if(!(v1.test(in1)))
+{
+  uname.innerText="username should contain 6 chars";
+	 
+}
+else          
+{  uname.innerText="";
+
+}
+       pass.innerText= "enter the password";
+           
+}
+
+function evalid()
+{
+var v2=new RegExp("^[\\w]{6,}$");
+var in2=document.f.password.value;
+ 
+if(!(v2.test(in2)))
+  pass.innerText= "password should conatin atleast 6chars";
+else          
+  pass.innerText= "";
+       emai.innerText= "enter the email";
+           
+}
+function phvalid()
+{
+ var v3=new RegExp("^[\\w]+@[\\w]+.com$");
+ var in3=document.f.email.value;
+if(!(v3.test(in3)))
+  emai.innerText= "email should be in the form name@domain.com";
+else          
+  emai.innerText= "";
+       ph.innerText= "enter the phonenumber";
+           
+}
+function pnvalid()
+{
+ var v4=new RegExp("^[\\d]{10}$");
+  var in4=document.f.phonenum.value;
+if(!(v4.test(in4)))
+  ph.inerText = "phonenumber should cotain 10 digits";
+else          
+  ph.innerText= "";
+                 
+}
+
+</script> 
+
+
+</head>
+<body >
+ <center>
+<form name=f>
+<table align=center>
+<caption align=left> REGISTRATION </caption>
+<tr >
+  <td>USERNAME :</td>
+  <td  > <input type=text name=login onfocus=uvalid()></td>
+  <td> <p id= "uname"> </p></td>
+</tr>
+ <tr>
+  <td>PASSWORD:</td>
+  <td  ><input type=password name=password onfocus=pvalid()></td> 
+  <td> <p id= "pass"> </p></td>
+</tr>
+<tr >
+  <td>E-mail id:</td>
+  <td  ><input type=text name=email onfocus=evalid()></td>
+   <td> <p id= "emai"> </p></td>
+</tr>
+<tr>
+ <td>Phone Number:</td> 
+ <td ><input type=text name=phonenum onfocus=phvalid() onblur=pnvalid() ></td>
+ <td> <p id= "ph"> </p></td>
+</tr>
+<tr >
+  <td>sex</td>
+ <td><input type=radio name=sex value="male">male</td>
+ <td  ><input type=radio name=sex value="female"> female</td>
+</tr>
+<tr >
+<td>Date of Birth:</td>
+<td> Date<select>
+     <option>1</option><option>2</option> <option>3</option> <option>4</option>
+   </select>
+</td>
+<td>
+  Month<select>
+     <option>1</option> <option>2</option> <option>3</option> <option>4</option>
+     </select>
+</td> 
+<td>
+  Year<select>
+     <option>1988</option><option>2007</option>><option>2008</option>
+      </select>
+ </td>
+</tr>
+<tr>
+  <td>Languages</td>
+</tr>
+
+<tr>
+ <td></td> 
+<td><input type=checkbox name=lgroup>Telugu</td>
+  <td><input type=checkbox name=lgroup>Hindi</td>
+  <td></td> 
+</tr>
+<tr>
+  <td></td>  
+ <td><input type=checkbox name=lgroup>English</td>
+  <td><input type=checkbox name=lgroup>Tamil</td></tr>
+<tr>
+ <td> Address</td><td><textarea rows=5 columns=10></textarea></td></tr>
+<tr>
+ <td><input type=button   value="submit"></td>
+ <td><input type=reset value="reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
